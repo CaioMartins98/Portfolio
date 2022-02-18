@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import perfil from "../../assets/me.jpeg";
+import perfil from "../../assets/me.jpg";
 import WaveLine from "../WaveLine";
 
 export const Container = styled.div`
   height: 1200px;
+  width:auto;
   background: #f5f5f5;
   margin-top: 100px;
   display: flex;
@@ -17,6 +18,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     height: 700px;
+    width:auto;
   }
 `;
 
@@ -82,7 +84,8 @@ export const IntroductionBold = styled.p`
 
   /* font-weight: bold; */
 `;
-export const ContainerDescriptionImg = styled.div`
+
+export const ContainerImg = styled.div`
   width: 400px;
   height: 500px;
   display: flex;
@@ -90,11 +93,20 @@ export const ContainerDescriptionImg = styled.div`
   align-items: center;
 `;
 
+export const ContainerDescriptionImg = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+  margin-bottom: 100px;
+  justify-content: space-around;
+`;
+
 export const DescriptionImg = styled.p`
   font-family: "Poppins";
   font-size: 14px;
   margin-bottom: 130px;
   color: #999;
+  margin-right: 10px;
   @media (min-width: 768px) {
     margin-bottom: 100px;
   }
@@ -137,6 +149,7 @@ export const DescriptionContainer = styled.div`
 export const Description = styled.p`
   font-family: "Poppins";
   font-size: 18px;
+  
   @media (min-width: 768px) {
     font-size: 20px;
     margin-bottom: 100px;

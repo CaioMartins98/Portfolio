@@ -38,9 +38,9 @@ const Dashboard: React.FC = () => {
 
   const ExperienceComponent = () => {
     return (
-      <Fade left>
+      <>
         <Experience />
-      </Fade>
+      </>
     );
   };
 
@@ -111,9 +111,8 @@ const Dashboard: React.FC = () => {
       <div id="education">{EducationComponent()}</div>
 
       <div id="contact">{ContactComponent()}</div>
-      <Tooltip title="Ir para o topo" arrow placement="top-end">
+      <Tooltip title="Ir para o topo" arrow >
         <ButtonContainer>
-          <div></div>
           <ButtonField
             onClick={() => {
               scrollToTop();

@@ -3,6 +3,7 @@ import React from "react";
 import {
   Container,
   ContainerDescriptionImg,
+  ContainerImg,
   Description,
   DescriptionContainer,
   DescriptionImg,
@@ -17,21 +18,27 @@ import {
 import Zoom from "react-reveal/Zoom";
 import styled from "styled-components";
 
-import perfil from "../../assets/me.jpeg";
+import perfil from "../../assets/me.png";
 import { Link } from "@mui/material";
 
 const Intro: React.FC = () => {
   return (
     <Container>
       <Main>
-        <ContainerDescriptionImg>
+        <ContainerImg>
           <GifContainer />
-
-          <DescriptionImg>
-            Desenvolvedor Front-end, 24, Juiz de Fora - MG{" "}
-           
-          </DescriptionImg>
-        </ContainerDescriptionImg>
+          <ContainerDescriptionImg>
+            <DescriptionImg>
+              Desenvolvedor Front-end, 24, Juiz de Fora - MG{" "}
+            </DescriptionImg>
+            <img
+              alt="Brasil"
+              height={25}
+              src={require("../../assets/brasil.png")}
+              style={{ marginTop: "-3px" }}
+            />
+          </ContainerDescriptionImg>
+        </ContainerImg>
         <InfoContainer>
           <IntroductionContainer>
             <IntroductionBold>Olá! Eu sou o Caio 👋</IntroductionBold>

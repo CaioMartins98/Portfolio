@@ -74,6 +74,7 @@ export const LinkField = styled(Link)`
     transition: width 0.8s;
     margin-top: 2px;
     border-bottom: 2px solid #222;
+    border-top: 2px solid #222;
   }
 
   @media (min-width: 768px) {
@@ -85,12 +86,9 @@ export const ButtonContainer = styled.div`
   bottom: 6px;
   padding: 12px;
   position: fixed;
-  width: 100%;
+  
   height: 70px;
   /* margin-left: 80%; */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
   @media (min-width: 768px) {
     width: 90px;
@@ -104,17 +102,25 @@ export const ButtonContainer = styled.div`
 `;
 
 export const ButtonField = styled.button`
+  /* border: 3px solid black !important; */
   background: #000;
-  border-radius: 50px;
-  width: 60px;
+  border-radius: 4px;
+  width: 40px;
+  color: #fff;
+
   /* border: 1px solid #444; */
   border: none;
-  height: 60px;
+  height: 40px;
   cursor: pointer;
+  transition: 0.4s;
+  :hover {
+    background: #999;
+    color: #000;
+  }
   @media (min-width: 768px) {
-    width: 70px;
-    height: 70px;
-    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
   }
 `;
 
