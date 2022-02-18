@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import perfil from "../../assets/me.jpg";
-import WaveLine from "../WaveLine";
 
 export const Container = styled.div`
   height: 1200px;
   width:auto;
-  background: #f5f5f5;
+  background: transparent;
   margin-top: 100px;
   display: flex;
   flex-direction: column;
@@ -75,7 +74,7 @@ export const IntroductionBold = styled.p`
   font-family: "Poppins";
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #000;
-  font-size: 28px;
+  font-size: 25px;
   color: #000;
 
   @media (min-width: 768px) {
@@ -148,8 +147,8 @@ export const DescriptionContainer = styled.div`
 
 export const Description = styled.p`
   font-family: "Poppins";
-  font-size: 18px;
-  
+  font-size: 16px;
+  padding: 22px;
   @media (min-width: 768px) {
     font-size: 20px;
     margin-bottom: 100px;
@@ -180,7 +179,8 @@ export const ViewCV = styled.button`
   :hover {
     background: #fff;
     color: #000;
-
+    transform: scale(1.1);
+   
     font-weight: 500;
   }
 

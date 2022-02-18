@@ -15,10 +15,7 @@ import {
   ViewCV,
   ViewCVContainer,
 } from "./styles";
-import Zoom from "react-reveal/Zoom";
-import styled from "styled-components";
 
-import perfil from "../../assets/me.png";
 import { Link } from "@mui/material";
 
 const Intro: React.FC = () => {

@@ -8,21 +8,9 @@ import Experience from "../../components/Experience";
 import Intro from "../../components/Intro";
 import Education from "../../components/Education";
 import Contact from "../../components/Contact";
-import {
-  ButtonContainer,
-  ButtonField,
-  Container,
-  LinkField,
-  LinksContainer,
-  Title,
-  TitleContainer,
-} from "./styles";
-import { Link, animateScroll as scroll } from "react-scroll";
-import Tooltip from "@mui/material/Tooltip";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import Fade from "react-reveal/Fade";
-import CodeIcon from "@mui/icons-material/Code";
-import CodeOffIcon from "@mui/icons-material/CodeOff";
+
+import Header from "../../components/Header";
+import ButtonToTop from "../../components/ButtonToTop";
 
 const Dashboard: React.FC = () => {
   const [theme, setTheme] = usePersistedState<DefaultTheme>("theme", dark);
@@ -32,99 +20,22 @@ const Dashboard: React.FC = () => {
     setTheme(theme.title === "light" ? dark : light);
   };
 
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
-
-  const ExperienceComponent = () => {
-    return (
-      <>
-        <Experience />
-      </>
-    );
-  };
-
-  const EducationComponent = () => {
-    return (
-      <Fade left>
-        <Education />
-      </Fade>
-    );
-  };
-
-  const ContactComponent = () => {
-    return (
-      <Fade left>
-        <Contact />
-      </Fade>
-    );
-  };
-
   useEffect(() => {}, []);
 
   return (
     <ThemeProvider theme={theme}>
-      <Container>
-        <TitleContainer>
-          <CodeIcon fontSize="large" />
-          <Title>Caio Martins</Title>
-          <CodeOffIcon fontSize="large" />
-        </TitleContainer>
-        <LinksContainer>
-          <LinkField
-            activeClass="active"
-            smooth={true}
-            spy={true}
-            offset={-70}
-            duration={500}
-            to="experience"
-          >
-            Experiência
-          </LinkField>
-          <LinkField
-            activeClass="active"
-            smooth={true}
-            spy={true}
-            offset={-70}
-            duration={500}
-            to="education"
-          >
-            Formação
-          </LinkField>
-          <LinkField
-            activeClass="active"
-            smooth={true}
-            spy={true}
-            offset={-70}
-            duration={500}
-            to="contact"
-          >
-            Contato
-          </LinkField>
-        </LinksContainer>
-      </Container>
-      <div id="intro">
-        <Intro />
+      <Header experience="experience" education="education" contact="contact" />
+      <div style={{ background: "#f5f5f5" }}>
+        <div id="intro"> {<Intro />} </div>
+        <div style={{ background: "#222" }} id="experience">
+          {<Experience />}
+        </div>
+        <div id="education">{<Education />}</div>
+        <div style={{ background: "#222" }} id="contact">
+          {<Contact />}
+        </div>
+        <ButtonToTop />
       </div>
-      <div id="experience">{ExperienceComponent()}</div>
-
-      <div id="education">{EducationComponent()}</div>
-
-      <div id="contact">{ContactComponent()}</div>
-      <Tooltip title="Ir para o topo" arrow >
-        <ButtonContainer>
-          <ButtonField
-            onClick={() => {
-              scrollToTop();
-              setTimeout(() => {
-                document.location.reload();
-              }, 1700);
-            }}
-          >
-            <ExpandLessIcon sx={{ color: "#fff" }} fontSize="large" />
-          </ButtonField>
-        </ButtonContainer>
-      </Tooltip>
     </ThemeProvider>
   );
 };

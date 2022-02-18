@@ -1,12 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-import { Container, ExperienceContainer, Title, TitleContainer } from "./styles";
+import {
+  Company,
+  Container,
+  Description,
+  ExperienceContainer,
+  Occupation,
+  Title,
+  TitleContainer,
+} from "./styles";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { ReactComponent as Icon } from "./react.svg";
+import { ReactComponent as Icon } from "../../assets/work.svg";
 
 const Experience = () => {
   return (
@@ -27,18 +35,17 @@ const Experience = () => {
               }}
               icon={<Icon />}
             >
-              <h3 className="vertical-timeline-element-title">
+              <Company className="vertical-timeline-element-title">
                 RBM - Sistemas Inteligentes
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                {" "}
+              </Company>
+              <Occupation className="vertical-timeline-element-subtitle">
                 Desenvolvedor Front-end - Estágio
-              </h4>
-              <p>
+              </Occupation>
+              <Description>
                 Desenvolvimento de aplicações web e mobile para fintechs.
                 Utilização da arquitetura Flux para o gerenciamento de estado
                 com Redux e construí o front-end da aplicação com ReactJS.
-              </p>
+              </Description>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
@@ -48,38 +55,38 @@ const Experience = () => {
               iconStyle={{ background: "#444", color: "#fff" }}
               icon={<Icon />}
             >
-              <h3 className="vertical-timeline-element-title">
+              <Company className="vertical-timeline-element-title">
                 {" "}
                 Segware do Brasil
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
+              </Company>
+              <Occupation className="vertical-timeline-element-subtitle">
                 Desenvolvedor Front-end - Tempo Integral
-              </h4>
-              <p>
+              </Occupation>
+              <Description>
                 Atuação em projeto para segurança eletrônica remota, com
                 monitoramento em tempo real e controle de acesso. Utilização da
                 arquitetura Flux para o gerenciamento de estado com Recoil.js e
                 construí o front-end da aplicação com ReactJS e Typescript e
                 testes com Jest e Cypress.
-              </p>
+              </Description>
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               contentStyle={{ background: "#444", color: "#fff" }}
               contentArrowStyle={{ borderRight: "7px solid  #444 " }}
-              date="10/2021 - presente"
+              date="10/2021 - 03/2022"
               iconStyle={{ background: "#444", color: "#fff" }}
               icon={<Icon />}
             >
-              <h3 className="vertical-timeline-element-title"> Freelancer</h3>
-              <h4 className="vertical-timeline-element-subtitle">
+              <Company className="vertical-timeline-element-title"> Freelancer</Company>
+              <Occupation className="vertical-timeline-element-subtitle">
                 Desenvolvedor Front-end - Tempo Integral
-              </h4>
-              <p>
+              </Occupation>
+              <Description>
                 Desenvolvimento de aplicações web (landing pages, sites,
                 sistemas web, spa) e mobile para clientes dos mais diversos
                 tipos e segmentos.
-              </p>
+              </Description>
             </VerticalTimelineElement>
           </VerticalTimeline>
         </ExperienceContainer>
