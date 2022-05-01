@@ -26,7 +26,7 @@ export const Main = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 
   @media (min-width: 768px) {
@@ -59,14 +59,14 @@ export const IntroductionContainer = styled.div`
   justify-content: center;
   position: sticky;
   /* margin-top: 100px; */
-  padding: 25px;
+  padding: 0px;
 
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 100px;
   }
 `;
 
@@ -135,8 +135,6 @@ export const GifContainer = styled.div`
 export const DescriptionContainer = styled.div`
   width: 100%;
   height: auto;
-  margin-bottom: auto;
-
   padding: 5px;
   margin-top: 50px;
 
@@ -151,7 +149,7 @@ export const Description = styled.p`
   padding: 22px;
   @media (min-width: 768px) {
     font-size: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 5px;
   }
 `;
 
@@ -188,6 +186,6 @@ export const ViewCV = styled.button`
     width: 160px;
     height: 50px;
     font-size: 16px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
 `;

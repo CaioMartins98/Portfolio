@@ -78,7 +78,10 @@ const Experience = () => {
               iconStyle={{ background: "#444", color: "#fff" }}
               icon={<Icon />}
             >
-              <Company className="vertical-timeline-element-title"> Freelancer</Company>
+              <Company className="vertical-timeline-element-title">
+                {" "}
+                Freelancer
+              </Company>
               <Occupation className="vertical-timeline-element-subtitle">
                 Desenvolvedor Front-end - Tempo Integral
               </Occupation>
@@ -88,44 +91,28 @@ const Experience = () => {
                 tipos e segmentos.
               </Description>
             </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              contentStyle={{ background: "#444", color: "#fff" }}
+              contentArrowStyle={{ borderRight: "7px solid  #444 " }}
+              date="03/2021 - atual"
+              iconStyle={{ background: "#444", color: "#fff" }}
+              icon={<Icon />}
+            >
+              <Company className="vertical-timeline-element-title">
+                Gira
+              </Company>
+              <Occupation className="vertical-timeline-element-subtitle">
+                Desenvolvedor Front-end Mobile - Tempo Integral
+              </Occupation>
+              <Description>
+                Atuação em projeto de Marketplace B2B. Utilização da ferramenta
+                React Native com arquitetura Flux para o controle de estado
+                usando Redux.
+              </Description>
+            </VerticalTimelineElement>
           </VerticalTimeline>
         </ExperienceContainer>
-        {/* 
-        <ExperiencesContainer>
-          <Fade left>
-            <CardExperience
-              company="RBM Sistemas Inteligentes"
-              title="Desenvolvedor Front-end - Estágio"
-              date=" 04/2021 - 07/2021"
-              image={rbm}
-              description=" Desenvolvimento de aplicações web e mobile para fintechs. Utilização da
-                              arquitetura Flux para o gerenciamento de estado com Redux e construí
-                              o front-end da aplicação com ReactJS."
-            />
-          </Fade>
-
-          <Fade right>
-            <CardExperience
-              company="Segware do Brasil"
-              title="Desenvolvedor Front-end - Tempo Integral"
-              date="07/2021 - 10/2021"
-              image={segware}
-              description=" Atuação em projeto para segurança eletrônica remota, com monitoramento em tempo 
-                              real e controle de acesso. Utilização da arquitetura Flux para o gerenciamento de estado com Recoil.js e 
-                              construí o front-end da aplicação com ReactJS e Typescript e testes com Jest e Cypress."
-            />
-          </Fade>
-          <Fade left>
-            <CardExperience
-              company=" Freelancer"
-              title="Desenvolvedor Front-end - Tempo Integral"
-              date="10/2021 - atual"
-              image={freela}
-              description="Desenvolvimento de aplicações web (landing pages, sites, sistemas web, spa) e 
-                             mobile para clientes dos mais diversos tipos e segmentos."
-            />
-          </Fade>
-        </ExperiencesContainer> */}
       </div>
     </Container>
   );

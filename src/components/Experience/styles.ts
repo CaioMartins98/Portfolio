@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 1100px;
+  height: 1350px;
   
   background: transparent;
   @media (min-width: 768px) {
-    height: 1250px;
+    height: 1550px;
   }
 `;
 export const TitleContainer = styled.div`
