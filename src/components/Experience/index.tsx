@@ -108,7 +108,7 @@ const Experience = () => {
               <Description>
                 Atuação em projeto de Marketplace B2B. Utilização da ferramenta
                 React Native com arquitetura Flux para o controle de estado
-                usando Redux.
+                usando Redux
               </Description>
             </VerticalTimelineElement>
           </VerticalTimeline>
